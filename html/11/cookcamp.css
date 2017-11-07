@@ -1,0 +1,251 @@
+/*about all********************************************/
+.container {
+    width:960px;
+    margin: 0 auto;
+}
+/*背景色白*/
+.white_background_color{                                        
+    background-color:#ffffff;
+}
+.padding{
+    padding:10px;
+}
+.margin{
+    margin-bottom:10px;
+}
+
+/*about header********************************************/
+.header{/*headerだと適用されないのはなぜか？*/
+    border-bottom:solid 1px #cccccc;
+    margin-top:10px;
+}
+.header_flex1{/**/
+    display:flex;
+}
+.header_logo{/**/
+    flex:1;
+    margin-top:10px;
+}
+.header_research{/**/
+    flex:1;
+    text-align:right;
+    margin-top:15px;
+}
+.search_style{
+    border-radius:30px;
+}
+.header_flex2{
+    display:flex;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+/*リスト編集*/
+ul {
+  list-style-type: none;
+}
+.li_header {
+  flex:1;
+  text-align: center;
+  border-right: 1px solid #B8860B;
+}
+.header_link{
+    /*文字周囲に等倍余白を設ける設定（3行）*/
+    display:block;
+    text-align:center;
+    margin:3px;
+    
+    text-decoration:none;
+    color:#B8860B;
+　  font-weight:bold;
+}
+li:last-child {
+  border-right: 0;
+}
+.header_logo_comment{
+    margin-top:10px;
+    color:#B8860B;
+    font-weight:bold;
+}
+
+/*****************about main**********************/
+/*横並び処理*/
+.main_flex{
+    display:flex;
+}
+.main_margin{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+/*背景背景色*/
+.main_background_color{
+    background-color:#f5f5dd;
+}
+/*最大表示*/
+.mainview_image_width{
+    width: 100%;
+}
+
+/*見出し書式*/
+.p_main{
+    background-color:#99bb22;
+    border-radius:30px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+}
+.dish{
+    display:inline-block;
+    line-height:20px;
+    padding-left:20px;
+    color:#ffffff;
+    font-weight:bold;
+    background-image:url(dish.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+.span{
+    display:inline-block;
+    line-height:20px;
+    
+}
+
+/*about nav**********************************************/
+nav{
+ flex:1.1;
+}
+/*リスト*/
+.arrow{
+    display:inline-block;
+    line-height:15px;
+    background-image:url(arrow.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    padding-left:20px;
+}
+/*箇条書き設定*/
+.ul_nav{
+    padding-left:0;
+}
+.li_nav{
+    list-style:none;
+    border-bottom:dotted 1px;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+/*アイコンと文字の高さそろえる*/
+.a_nav{
+    display:block;
+    line-height:15px;
+    font-weight:bold;
+    color:#000000;
+    text-decoration:none;
+}
+
+
+/*about article*********************************************************************************/
+article{
+    flex:3.5;
+}
+.article_margin{
+    margin-left:10px;
+    margin-right:10px;
+}
+.p_margin{
+    margin-top:10px;
+}
+/*article上段**************************************************/
+.article_flex1{
+    display:flex;
+    margin-top:10px;
+}
+figure{
+    flex:1;
+    text-align:center;
+}
+.name_font_size{
+    font-size:10px;
+}
+/*article中段***************************************************/
+
+.article_flex2{
+    display:flex;
+    margin-top:10px;
+}
+.text_indent{
+    text-indent:15px;
+}
+.japanese_food_image{/*下段共通*/
+    width:280px;
+    text-align:center;
+}
+.japanese_food_explanation{/*下段共通*/
+    width:280px;
+}
+.explanation_font_size{/*下段共通*/
+    font-size:15px;
+}
+.next{/*下段共通*/
+    float:right;
+    margin-top:10px;
+
+}
+.article_link_decoration{
+    text-decoration:none;
+    color:#fc8833;
+        
+}
+/*article下段***************************************************/
+.article_flex3{
+    display:flex;
+    margin-top:10px;
+}
+.article_flex4{
+    display:flex;
+    margin-top:20px;
+}
+h5{
+    color:#664433;
+    margin-top:10px;
+}
+
+/*about aside*******************************************************************************************/
+aside{
+    flex:0.5;
+    text-align:right;
+}
+.aside_img_margin{
+    margin-bottom:10px;
+    }
+
+/*about footer*******************************************/
+footer{
+    border-top:solid 10px #cccccc;
+}
+.footer_flex{
+    display:flex;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+ul{
+    list-style:none;
+}
+.li_footer{
+    flex:1;
+    text-align:center;
+    border-right:1px solid #cccccc;
+}
+.a_footer{
+    text-decoration:none;
+    color:#664433;
+    font-weight:bold;
+}
+/*最終リスト調整（navにも適用）*/
+li:last-child{
+    border-right:0;
+    border-bottom:0;
+}
+.copyright_positon_color{
+    text-align:center;
+    color:#cccccc;
+    margin-bottom:10px;
+}

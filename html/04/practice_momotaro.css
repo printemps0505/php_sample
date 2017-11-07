@@ -1,0 +1,28 @@
+
+h1{
+    quotes:"<"">"; 
+    content: open-quote; 
+    border-top:dotted #0000ff;
+    border-bottom:dotted #0000ff;
+    background-color:#00ffff;
+    text-align:center;
+    font-size:20px;
+    color:#0000ff;
+}
+h1:before {content: open-quote; }
+h1:after {content: close-quote; }
+
+span{
+    color:#ff0000;
+    font-size:18px;
+}
+ul{
+    list-style-type:square;
+}
+p{
+    font-size:16px;
+}
+
+a{
+    color:#FF6600;
+}

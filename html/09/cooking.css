@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+}
+header, main, nav, aside, article, section {
+  border: solid 1px;
+}
+footer{
+    border-bottom:solid 1px;
+}
+img {
+  width: 300px;
+}
+.nav_art_asi{
+    display:flex;
+     width: 960px;
+    margin: 0 auto;
+}
+nav{
+    flex:1;
+}
+article{
+    flex:3;
+}
+aside{
+    flex:2;
+}

@@ -1,0 +1,55 @@
+.block-group {
+  margin: 0 auto;
+  width: 500px;
+  border: solid 2px;
+}
+ 
+.blockAB{
+    display:flex;
+}
+.blockA {
+  height: 50px;
+  background-color: #ff0000;
+  flex:1;
+}
+ 
+.blockB {
+  background-color: #00ff00;
+  height: 50px;
+  flex:1;
+}
+ 
+.blockCDE{
+    display:flex;
+}
+.blockC {
+  height: 100px;
+  background-color: #0000ff;
+  flex:1;
+}
+ 
+.blockDE{
+    flex:1;
+}
+.blockD {
+  height: 50px;
+  background-color: #ffff00;
+}
+ 
+.blockE {
+  height: 50px;
+  background-color: #ff00ff;
+}
+.blockFG{
+    display:flex;
+}
+.blockF {
+  height: 50px;
+  background-color: #ffffff;
+}
+ 
+.blockG {
+  height: 50px;
+  background-color: #00ffff;
+  flex:5;
+}

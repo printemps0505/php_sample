@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>チャンレンジ課題（フォーム）</title>
+</head>
+<body>
+    <h1>ITアンケート</h1>
+    <form action="#">
+        <p>
+            <label for="name">お名前：</label>
+            <input type="text" name="name" id="name" placeholder="コード加奈子">
+        </p>
+        <p>
+            <label for="mail">メールアドレス：</label>
+            <input type="email" name="mail" id="mail">
+        </p>
+        <p>
+            <label for="tellphone">電話番号：</label>
+            <input type="tel" name="tellphone" id="tellphone" placeholder="012-3456-7890">
+        </p>
+        <p>
+            現在のHTML理解度を教えてください
+            <label><input type="radio" name="html_level" value="law">低い</label>
+            <label><input type="radio" name="html_level" value="standard" checked>普通</label>
+            <label><input type="radio" name="html_level" value="high">高い</label>
+        </p>
+        <p>
+            現在のCSS理解度を教えてください
+            <lavel><input type="radio" name="css_level" value="law">低い</lavel>
+            <lavel><input type="radio" name="css_level" value="standard" checked>普通</lavel>
+            <lavel><input type="radio" name="css_level" value="high">高い</lavel>
+        </p>
+         <p>
+            聞いたことがあるプログラミング言語を選択してください(複数選択可)
+            <lavel><input type="radio" name="c" value="c">C</lavel>
+            <lavel><input type="radio" name="java" value="Java" >Java</lavel>
+            <lavel><input type="radio" name="php" value="PHP">PHP</lavel>
+            <lavel><input type="radio" name="ruby" value="Ruby">Ruby</lavel>
+            <lavel><input type="radio" name="javascript" value="JavaScript">JavaScript</lavel>
+        </p>
+        <p>
+            <input type="submit" value="送信">
+        </p>
+    </form>
+</body>
+</html>

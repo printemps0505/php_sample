@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<script>
+  var data = [59, 39, 100, 2, 15, 40, 84, 97];
+  var ave; // 平均値
+  var sum = 0;
+  
+  // 関数calc_aveを利用し配列dataの平均値aveを計算
+  calc_ave(sum);
+ 
+  // 平均値を書き出し
+  document.write(ave);
+ 
+  // 関数calc_aveを定義
+  function calc_ave(){
+      for (var i = 0; i < data.length; i++) {
+        sum += data[i];
+  }
+        ave = sum / data.length;
+        return ave;
+  }
+ 
+</script>
