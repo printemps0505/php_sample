@@ -5,7 +5,6 @@ $your_info = '';
 $your_name = '';
 $your_comment = '';
 $errors = array();
-$errors2 = array();
 
 // フォームからのデータ受け取り判定及び、./rebiew.txt'への書き込み処理*******************************************************************
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){//フォームからデータが入力されたかどうかの判定

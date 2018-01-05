@@ -1,0 +1,42 @@
+assoc_arrayの結果
+
+最初の一覧取得時
+
+array(5) { [0]=> array(4) 
+		{ ["name"]=> string(18) "マウスパッド" [0]=> string(18) "マウスパッド" ["price"]=> string(3) "100" [1]=> string(3) "100" } 
+	   [1]=> array(4) 
+		{ ["name"]=> string(12) "イヤホン" [0]=> string(12) "イヤホン" ["price"]=> string(4) "2000" [1]=> string(4) "2000" } 
+	   [2]=> array(4) 
+		{ ["name"]=> string(3) "傘" [0]=> string(3) "傘" ["price"]=> string(3) "500" [1]=> string(3) "500" } 
+	   [3]=> array(4) 
+		{ ["name"]=> string(6) "お茶" [0]=> string(6) "お茶" ["price"]=> string(3) "100" [1]=> string(3) "100" }
+	   [4]=> array(4) 
+		{ ["name"]=> string(12) "サイダー" [0]=> string(12) "サイダー" ["price"]=> string(3) "100" [1]=> string(3) "100" }
+	 }
+消費税付き処理後
+
+array(5) { [0]=> array(4) 
+		{ ["name"]=> string(18) "マウスパッド" [0]=> string(18) "マウスパッド" ["price"]=> float(108) [1]=> string(3) "100" } 
+	   [1]=> array(4) 
+		{ ["name"]=> string(12) "イヤホン" [0]=> string(12) "イヤホン" ["price"]=> float(2160) [1]=> string(4) "2000" } 
+	   [2]=> array(4) 
+		{ ["name"]=> string(3) "傘" [0]=> string(3) "傘" ["price"]=> float(540) [1]=> string(3) "500" } 
+	   [3]=> array(4) 
+		{ ["name"]=> string(6) "お茶" [0]=> string(6) "お茶" ["price"]=> float(108) [1]=> string(3) "100" } 
+	   [4]=> array(4) 
+		{ ["name"]=> string(12) "サイダー" [0]=> string(12) "サイダー" ["price"]=> float(108) [1]=> string(3) "100" } 
+	}
+
+htmlcharacter処理後
+
+array(5) { [0]=> array(4) 
+		{ ["name"]=> string(18) "マウスパッド" [0]=> string(18) "マウスパッド" ["price"]=> string(3) "108" [1]=> string(3) "100" }
+	   [1]=> array(4)
+		 { ["name"]=> string(12) "イヤホン" [0]=> string(12) "イヤホン" ["price"]=> string(4) "2160" [1]=> string(4) "2000" } 
+	   [2]=> array(4)
+		 { ["name"]=> string(3) "傘" [0]=> string(3) "傘" ["price"]=> string(3) "540" [1]=> string(3) "500" } 
+	   [3]=> array(4)
+		 { ["name"]=> string(6) "お茶" [0]=> string(6) "お茶" ["price"]=> string(3) "108" [1]=> string(3) "100" }
+	   [4]=> array(4) 
+		{ ["name"]=> string(12) "サイダー" [0]=> string(12) "サイダー" ["price"]=> string(3) "108" [1]=> string(3) "100" }
+	 }

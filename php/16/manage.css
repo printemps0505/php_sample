@@ -1,0 +1,14 @@
+.black_under_line{
+    margin-bottom:30px;
+    border-bottom:solid 1px;
+}
+.style{
+    border-radius:30px;
+}
+.img_size{
+    height:100px;
+}
+.form_size{
+    width:50px;
+    text-align:right;
+}
