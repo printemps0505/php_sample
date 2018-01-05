@@ -16,9 +16,7 @@ try {
  
   // 商品の値段を税込みに変換
   $goods_data = price_before_tax_assoc_array($goods_data);
- 
-  // 特殊文字をHTMLエンティティに変換
-  $goods_data = entity_assoc_array($goods_data);
+  
  
 } catch (Exception $e) {
   $err_msg[] = $e->getMessage();
@@ -26,5 +24,4 @@ try {
  
 // 商品一覧テンプレートファイル読み込み
 include_once './view/view.php';
- 
 ?>

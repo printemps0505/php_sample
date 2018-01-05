@@ -20,7 +20,7 @@
       }
       
       function show() {
-        print "{$this->name}の身長は{$this->height}cm、体重は{$this->weight}kgです。<br>";
+        print "{$this->name}の身長は{$this->height}cm<br>体重は{$this->weight}kgです。<br>";
       }
     }
  

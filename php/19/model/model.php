@@ -38,32 +38,41 @@ function get_goods_table_list($dbh) {
 * @return array 税込み商品一覧配列データ
 */
 function price_before_tax_assoc_array($assoc_array) {
-    //配列$assoc_arrayの中身を、商品名：価格として実行。($keyと$valueという名前は何でもいい)
-    //この関数実行時は、DBに接続中なので、$key => $valueとすることで、商品名と価格を指定することになる
+    //この時点で、controller.phpの$goods_dataの値(商品一覧データ)を受け取っている。
+    
+    //繰り返し処理($assoc_array変数を、キー(0~)を$key変数・値(商品名、価格)を$value変数に入れる連想配列として使用する)
   foreach ($assoc_array as $key => $value) {
     // 税込み価格へ変換(端数は切り上げ)
     $assoc_array[$key]['price'] = price_before_tax($assoc_array[$key]['price']);
+    // var_dump($assoc_array[$key]['price']);    //中身はfloat(108) float(2160) float(540) float(108) float(108)
+     //var_dump($assoc_array[$key]['name']);    //string(18) "マウスパッド" string(12) "イヤホン" string(3) "傘" string(6) "お茶" string(12) "サイダー"
   }
- 
   return $assoc_array;
 }
  
-/**
-* (4).特殊文字をHTMLエンティティに変換する(2次元配列の値)
-* @param array  $assoc_array 変換前配列
-* @return array 変換後配列
-*/
-function entity_assoc_array($assoc_array) {
+// /**
+// * (4).特殊文字をHTMLエンティティに変換する(2次元配列の値)
+// * @param array  $assoc_array 変換前配列
+// * @return array 変換後配列
+// */
+// function entity_assoc_array($assoc_array) {
+//     // var_dump($assoc_array);//①
+//   foreach ($assoc_array as $key => $value) {
+//     //   var_dump($key);//②
+//     //   var_dump($value);//③
+    
+//     foreach ($value as $keys => $values) {//配列のままだとエンティティに変換できないので、さらに分割処理
+//       // 特殊文字をHTMLエンティティに変換
+//     //   var_dump($keys);//④
+//     //   var_dump($values);//⑤
+//         $assoc_array[$key][$keys] = h($values);//早退参照時は中身の変数を使用し、直接参照時(配列等で)はキーを指定する
+//     }
+//     // var_dump($keys);
+//     // var_dump($values);
+//   }
  
-  foreach ($assoc_array as $key => $value) {
-    foreach ($value as $keys => $values) {//keysとvaluesにsがついているのは単純な区別のためで深い意味はない
-      // 特殊文字をHTMLエンティティに変換
-      $assoc_array[$key][$keys] = entity_str($values);
-    }
-  }
- 
-  return $assoc_array;
-}
+//   return $assoc_array;
+// }
 
 //サブ処理********************************************************************
 /**
@@ -104,7 +113,7 @@ function price_before_tax($price) {
 * @param str  $str 変換前文字
 * @return str 変換後文字
 */
-function entity_str($str) {
+function h($str) {
  
   return htmlspecialchars($str, ENT_QUOTES, HTML_CHARACTER_SET);
 }

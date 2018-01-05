@@ -27,8 +27,8 @@
     <tr>
 <?php foreach ($goods_data as $value) { ?>
     <tr>
-      <td><?php print $value['name']; ?></td>
-      <td><?php print $value['price']; ?></td>
+      <td><?php print h($value['name']); ?></td>
+      <td><?php print h($value['price']); ?></td>
     </tr>
 <?php } ?>
   </table>
