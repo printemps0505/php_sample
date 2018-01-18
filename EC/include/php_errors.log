@@ -1,0 +1,36 @@
+[11-Jan-2018 23:32:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/register_item_view.php on line 46
+[11-Jan-2018 23:32:51 UTC] PHP Stack trace:
+[11-Jan-2018 23:32:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/register_item_view.php:0
+[11-Jan-2018 23:32:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/register_item_view.php on line 49
+[11-Jan-2018 23:32:51 UTC] PHP Stack trace:
+[11-Jan-2018 23:32:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/register_item_view.php:0
+[11-Jan-2018 23:32:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/register_item_view.php on line 58
+[11-Jan-2018 23:32:51 UTC] PHP Stack trace:
+[11-Jan-2018 23:32:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/register_item_view.php:0
+[11-Jan-2018 23:32:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/register_item_view.php on line 91
+[11-Jan-2018 23:32:51 UTC] PHP Stack trace:
+[11-Jan-2018 23:32:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/register_item_view.php:0
+[14-Jan-2018 22:50:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/register_item_view.php on line 46
+[14-Jan-2018 22:50:14 UTC] PHP Stack trace:
+[14-Jan-2018 22:50:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/register_item_view.php:0
+[14-Jan-2018 22:50:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/register_item_view.php on line 49
+[14-Jan-2018 22:50:14 UTC] PHP Stack trace:
+[14-Jan-2018 22:50:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/register_item_view.php:0
+[14-Jan-2018 22:50:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/register_item_view.php on line 58
+[14-Jan-2018 22:50:14 UTC] PHP Stack trace:
+[14-Jan-2018 22:50:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/register_item_view.php:0
+[14-Jan-2018 22:50:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/register_item_view.php on line 91
+[14-Jan-2018 22:50:14 UTC] PHP Stack trace:
+[14-Jan-2018 22:50:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/register_item_view.php:0
+[17-Jan-2018 22:25:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/purchase_confirm_view.php on line 49
+[17-Jan-2018 22:25:56 UTC] PHP Stack trace:
+[17-Jan-2018 22:25:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/purchase_confirm_view.php:0
+[17-Jan-2018 22:25:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/purchase_confirm_view.php on line 52
+[17-Jan-2018 22:25:56 UTC] PHP Stack trace:
+[17-Jan-2018 22:25:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/purchase_confirm_view.php:0
+[17-Jan-2018 22:25:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/purchase_confirm_view.php on line 58
+[17-Jan-2018 22:25:56 UTC] PHP Stack trace:
+[17-Jan-2018 22:25:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/purchase_confirm_view.php:0
+[17-Jan-2018 22:25:56 UTC] PHP Fatal error:  Call to undefined function h() in /home/ubuntu/workspace/EC/include/view/purchase_confirm_view.php on line 80
+[17-Jan-2018 22:25:56 UTC] PHP Stack trace:
+[17-Jan-2018 22:25:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/include/view/purchase_confirm_view.php:0

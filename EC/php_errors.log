@@ -1,0 +1,81 @@
+[11-Jan-2018 10:08:01 UTC] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, array given in /home/ubuntu/workspace/EC/include/model/function.php on line 55
+[11-Jan-2018 10:08:01 UTC] PHP Stack trace:
+[11-Jan-2018 10:08:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/sign_up.php:0
+[11-Jan-2018 10:08:01 UTC] PHP   2. include_once() /home/ubuntu/workspace/EC/htdocs/sign_up.php:85
+[11-Jan-2018 10:08:01 UTC] PHP   3. h() /home/ubuntu/workspace/EC/include/view/sign_up_view.php:12
+[11-Jan-2018 10:08:01 UTC] PHP   4. htmlspecialchars() /home/ubuntu/workspace/EC/include/model/function.php:55
+[11-Jan-2018 10:08:01 UTC] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, array given in /home/ubuntu/workspace/EC/include/model/function.php on line 55
+[11-Jan-2018 10:08:01 UTC] PHP Stack trace:
+[11-Jan-2018 10:08:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/sign_up.php:0
+[11-Jan-2018 10:08:01 UTC] PHP   2. include_once() /home/ubuntu/workspace/EC/htdocs/sign_up.php:85
+[11-Jan-2018 10:08:01 UTC] PHP   3. h() /home/ubuntu/workspace/EC/include/view/sign_up_view.php:12
+[11-Jan-2018 10:08:01 UTC] PHP   4. htmlspecialchars() /home/ubuntu/workspace/EC/include/model/function.php:55
+[11-Jan-2018 10:08:01 UTC] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, array given in /home/ubuntu/workspace/EC/include/model/function.php on line 55
+[11-Jan-2018 10:08:01 UTC] PHP Stack trace:
+[11-Jan-2018 10:08:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/sign_up.php:0
+[11-Jan-2018 10:08:01 UTC] PHP   2. include_once() /home/ubuntu/workspace/EC/htdocs/sign_up.php:85
+[11-Jan-2018 10:08:01 UTC] PHP   3. h() /home/ubuntu/workspace/EC/include/view/sign_up_view.php:12
+[11-Jan-2018 10:08:01 UTC] PHP   4. htmlspecialchars() /home/ubuntu/workspace/EC/include/model/function.php:55
+[11-Jan-2018 10:08:01 UTC] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, array given in /home/ubuntu/workspace/EC/include/model/function.php on line 55
+[11-Jan-2018 10:08:01 UTC] PHP Stack trace:
+[11-Jan-2018 10:08:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/sign_up.php:0
+[11-Jan-2018 10:08:01 UTC] PHP   2. include_once() /home/ubuntu/workspace/EC/htdocs/sign_up.php:85
+[11-Jan-2018 10:08:01 UTC] PHP   3. h() /home/ubuntu/workspace/EC/include/view/sign_up_view.php:12
+[11-Jan-2018 10:08:01 UTC] PHP   4. htmlspecialchars() /home/ubuntu/workspace/EC/include/model/function.php:55
+[11-Jan-2018 10:08:01 UTC] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, array given in /home/ubuntu/workspace/EC/include/model/function.php on line 55
+[11-Jan-2018 10:08:01 UTC] PHP Stack trace:
+[11-Jan-2018 10:08:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/sign_up.php:0
+[11-Jan-2018 10:08:01 UTC] PHP   2. include_once() /home/ubuntu/workspace/EC/htdocs/sign_up.php:85
+[11-Jan-2018 10:08:01 UTC] PHP   3. h() /home/ubuntu/workspace/EC/include/view/sign_up_view.php:12
+[11-Jan-2018 10:08:01 UTC] PHP   4. htmlspecialchars() /home/ubuntu/workspace/EC/include/model/function.php:55
+[11-Jan-2018 10:28:33 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/login_view.php on line 11
+[11-Jan-2018 10:28:33 UTC] PHP Stack trace:
+[11-Jan-2018 10:28:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/login.php:0
+[11-Jan-2018 10:28:33 UTC] PHP   2. include_once() /home/ubuntu/workspace/EC/htdocs/login.php:8
+[11-Jan-2018 23:02:45 UTC] PHP Fatal error:  Call to undefined function get_drink_list() in /home/ubuntu/workspace/EC/htdocs/register_item.php on line 142
+[11-Jan-2018 23:02:45 UTC] PHP Stack trace:
+[11-Jan-2018 23:02:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/register_item.php:0
+[11-Jan-2018 23:33:26 UTC] PHP Fatal error:  Call to undefined function get_drink_list() in /home/ubuntu/workspace/EC/htdocs/register_item.php on line 143
+[11-Jan-2018 23:33:26 UTC] PHP Stack trace:
+[11-Jan-2018 23:33:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/register_item.php:0
+[12-Jan-2018 00:07:50 UTC] PHP Fatal error:  Call to undefined function upload_img() in /home/ubuntu/workspace/EC/htdocs/register_item.php on line 64
+[12-Jan-2018 00:07:50 UTC] PHP Stack trace:
+[12-Jan-2018 00:07:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/register_item.php:0
+[14-Jan-2018 02:46:56 UTC] PHP Fatal error:  Call to undefined function get_post_data() in /home/ubuntu/workspace/EC/htdocs/register_item.php on line 90
+[14-Jan-2018 02:46:56 UTC] PHP Stack trace:
+[14-Jan-2018 02:46:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/register_item.php:0
+[14-Jan-2018 02:48:15 UTC] PHP Fatal error:  Call to undefined function update_drink_master_status() in /home/ubuntu/workspace/EC/htdocs/register_item.php on line 125
+[14-Jan-2018 02:48:15 UTC] PHP Stack trace:
+[14-Jan-2018 02:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/register_item.php:0
+[14-Jan-2018 08:27:33 UTC] PHP Fatal error:  Call to undefined function get_post_data() in /home/ubuntu/workspace/EC/htdocs/display_item_detail.php on line 17
+[14-Jan-2018 08:27:33 UTC] PHP Stack trace:
+[14-Jan-2018 08:27:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/display_item_detail.php:0
+[14-Jan-2018 13:54:49 UTC] PHP Fatal error:  Call to undefined function get_cart_list() in /home/ubuntu/workspace/EC/htdocs/cart_list.php on line 39
+[14-Jan-2018 13:54:49 UTC] PHP Stack trace:
+[14-Jan-2018 13:54:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/cart_list.php:0
+[14-Jan-2018 13:56:16 UTC] PHP Fatal error:  Call to undefined function get_cart_list() in /home/ubuntu/workspace/EC/htdocs/cart_list.php on line 39
+[14-Jan-2018 13:56:16 UTC] PHP Stack trace:
+[14-Jan-2018 13:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/cart_list.php:0
+[14-Jan-2018 13:57:56 UTC] PHP Fatal error:  Call to undefined function get_cart_list() in /home/ubuntu/workspace/EC/htdocs/cart_list.php on line 39
+[14-Jan-2018 13:57:56 UTC] PHP Stack trace:
+[14-Jan-2018 13:57:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/cart_list.php:0
+[14-Jan-2018 13:58:27 UTC] PHP Fatal error:  Call to undefined function get_cart_list() in /home/ubuntu/workspace/EC/htdocs/cart_list.php on line 38
+[14-Jan-2018 13:58:27 UTC] PHP Stack trace:
+[14-Jan-2018 13:58:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/cart_list.php:0
+[14-Jan-2018 23:53:43 UTC] PHP Fatal error:  Call to undefined function get_login_user_id() in /home/ubuntu/workspace/EC/htdocs/display_item.php on line 9
+[14-Jan-2018 23:53:43 UTC] PHP Stack trace:
+[14-Jan-2018 23:53:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/display_item.php:0
+[17-Jan-2018 07:13:33 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/cart_list_view.php on line 49
+[17-Jan-2018 07:13:33 UTC] PHP Stack trace:
+[17-Jan-2018 07:13:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/cart_list.php:0
+[17-Jan-2018 07:13:33 UTC] PHP   2. include_once() /home/ubuntu/workspace/EC/htdocs/cart_list.php:81
+[17-Jan-2018 07:45:25 UTC] PHP Fatal error:  Call to undefined function get_cart_list_by_id() in /home/ubuntu/workspace/EC/htdocs/cart_list.php on line 39
+[17-Jan-2018 07:45:25 UTC] PHP Stack trace:
+[17-Jan-2018 07:45:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/cart_list.php:0
+[17-Jan-2018 07:56:37 UTC] PHP Fatal error:  Call to undefined function get_cart_by_item_id() in /home/ubuntu/workspace/EC/htdocs/display_item_detail.php on line 49
+[17-Jan-2018 07:56:37 UTC] PHP Stack trace:
+[17-Jan-2018 07:56:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/display_item_detail.php:0
+[17-Jan-2018 23:26:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/EC/include/view/purchase_view.php on line 19
+[17-Jan-2018 23:26:41 UTC] PHP Stack trace:
+[17-Jan-2018 23:26:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/EC/htdocs/purchase.php:0
+[17-Jan-2018 23:26:41 UTC] PHP   2. include_once() /home/ubuntu/workspace/EC/htdocs/purchase.php:36
