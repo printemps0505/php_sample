@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample15</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$("li span:only-child").css("color","red");
+});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li><span>テキスト</span>テキストテキストテキストテキスト</li>
+			<li><span>テキスト</span>テキスト<span>テキスト</span>テキストテキスト</li>
+			<li>テキストテキストテキストテキストテキスト</li>
+			<li>テキストテキストテキストテキストテキスト</li>
+		</ul>
+	</body>
+</html>

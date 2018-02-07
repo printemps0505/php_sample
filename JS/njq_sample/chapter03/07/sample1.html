@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample1</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+			/*global $*/
+			$(function(){
+				$("ul.sub").hide();
+				$("ul.menu li").hover(function(){
+					$("ul:not(:animated)",this).slideDown("fast");
+				},
+				function(){
+					$("ul",this).slideUp("fast");
+				});
+			});
+		</script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				list-style-type:none;
+			}
+			#container{
+				margin:100px auto;
+				width:537px;
+			}
+			ul.menu li{
+				float:left;
+				width:179px;
+				height:48px;
+				background:url("images/btn.png");
+				position:relative;
+			}
+			ul.menu li a{
+				/*ブロック化して、クリックできる範囲を広げる*/
+				display:block;
+				width:100%;
+				height:100%;
+				line-height:48px;
+				text-indent:30px;
+				font-weight:bold;
+				color:#CFDFB5;
+				text-decoration:none;
+			}
+			ul.menu li a:hover{
+				background:url("images/btn_over.png");
+			}
+			ul.menu li ul.sub{
+				position:absolute;
+			}
+			/*以下二つは、IEのバージョンにより使い分けるもの。*/
+			/*子要素のfloat:leftを解除するための処理*/
+			ul.menu{
+				/*zoomはIE6,7独自拡張機能*/
+				zoom:1;
+			}
+			ul.menu:after {
+				/*IE6,7以外のバージョン*/
+				height:0;
+				visibility:hidden;
+				content:".";
+				display:block;
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<ul class="menu">
+				<li><a href="#">メニューA</a>
+					<ul class="sub">
+						<li><a href="#">サブメニューA</a></li>
+						<li><a href="#">サブメニューA</a></li>
+						<li><a href="#">サブメニューA</a></li>
+					</ul>
+				</li>
+				<li><a href="#">メニューB</a>
+					<ul class="sub">
+						<li><a href="#">サブメニューB</a></li>
+						<li><a href="#">サブメニューB</a></li>
+						<li><a href="#">サブメニューB</a></li>
+					</ul>
+				</li>
+				<li><a href="#">メニューC</a>
+					<ul class="sub">
+						<li><a href="#">サブメニューC</a></li>
+						<li><a href="#">サブメニューC</a></li>
+						<li><a href="#">サブメニューC</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -2,6 +2,7 @@
 // $user_name ='';
 // $cookie_check = '';
 
+//クッキーのデータとして扱う前処理
 $user_name = get_cookie_data('user_name');
 $cookie_check = get_cookie_data('cookie_check');
 

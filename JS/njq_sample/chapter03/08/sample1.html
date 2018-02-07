@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample1</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<style>
+			html,body{
+				margin:0;
+				padding:0;
+				height:100%;
+			}
+			h1{
+				margin:20px 50px;
+				font-size:large;
+				border-left:10px solid #7BAEB5;
+				border-bottom:1px solid #7BAEB5;
+				padding:10px;
+				width:600px;
+			}
+			ul{
+				width:700px;
+			}
+			ul li{
+				float:left;
+				list-style-type:none;
+			}
+			ul li img{
+				border:0;
+				margin:10px;
+			}
+			div#glayLayer{
+				position:fixed;
+				left:0;
+				top:0;
+				height:100%;
+				width:100%;
+				background:black;
+				/*透明度設定（IE9未満とIE9以降でそれぞれある）*/
+				filter:alpha(opacity=60);
+				opacity: 0.60;
+			}
+			#overLayer{
+				position: fixed;
+				top:50%;
+				left:50%;
+				margin-top:-244px;
+				margin-left:-325px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>jQueryを利用したモーダルウィンドウの作成</h1>
+		<ul>
+			<li><a href="images/photo1.jpg" class="modal"><img src="images/photo1_thum.jpg" alt="シャンデリア"></a></li>
+			<li><a href="images/photo2.jpg" class="modal"><img src="images/photo2_thum.jpg" alt="バラ"></a></li>
+			<li><a href="images/photo3.jpg" class="modal"><img src="images/photo3_thum.jpg" alt="海"></a></li>
+			<li><a href="images/photo4.jpg" class="modal"><img src="images/photo4_thum.jpg" alt="門"></a></li>
+			<li><a href="images/photo5.jpg" class="modal"><img src="images/photo5_thum.jpg" alt="海"></a></li>
+			<li><a href="images/photo6.jpg" class="modal"><img src="images/photo6_thum.jpg" alt="あじさい"></a></li>
+			<li><a href="images/photo7.jpg" class="modal"><img src="images/photo7_thum.jpg" alt="空"></a></li>
+			<li><a href="images/photo8.jpg" class="modal"><img src="images/photo8_thum.jpg" alt="建物"></a></li>
+		</ul>
+		<div id='glayLayer'></div>
+		<div id='overLayer'><img src='images/photo5.jpg'></div>
+	</body>
+</html>

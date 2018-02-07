@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample1</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+			/*global $*/
+			$(function(){
+				$("span.tooltip").css({
+					opacity:"0.9",//透明度設定(0:透明1:不透明)
+					position:"absolute",
+					display:"none"
+				});
+				$("a").mouseover(function(){
+					$("span.tooltip").fadeIn();
+				}).mouseout(function(){
+					$("span.tooltip").fadeOut();
+				}).mousemove(function(e){
+					$("span.tooltip").css({
+						"top":e.pageY+10+"px",
+						"left":e.pageX+10+"px"
+					});
+				});
+			});
+		</script>
+		<style>
+body{
+	background:#777;
+	color:white;
+}
+a{
+	color:#00CCFF;
+}
+h1{
+	width:80%;
+	margin:10px auto;
+}
+p{
+	margin:10px 10%;
+}
+span.tooltip{
+	line-height:1.5;
+	color:white;
+	width:200px;
+	background:#FF9900;
+	border:2px solid white;
+	padding:1em;
+	font-size:small;
+}
+		</style>
+	</head>
+	<body>
+		<h1>tooltip sample</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed quam ac risus auctor pulvinar. Nullam tellus lorem, volutpat sit amet eleifend quis, semper pellentesque nunc. Aliquam eu tortor nec nisl suscipit vehicula et eu sapien. Maecenas at pretium diam. Proin non luctus diam. Pellentesque risus nisi, scelerisque eu ultricies quis, <a href="#">tooltip sample</a> <span class="tooltip">これは<br><strong>Web制作の現場で使うjQueryデザイン入門</strong><br>のサンプルプログラムです</span>luctus rhoncus dui. Proin pharetra aliquet justo, vel scelerisque lorem scelerisque eget. Praesent pharetra magna sit amet diam sagittis ac dictum nunc imperdiet. Pellentesque posuere vulputate fermentum. Vivamus fringilla commodo elit, in ornare libero imperdiet sed.</p>
+
+		<p>Proin adipiscing faucibus felis eget auctor. Duis sed ante turpis. Cras sit amet euismod est. Vivamus tempus nibh sed odio pulvinar nec varius leo dignissim. Morbi nunc dui, rutrum vitae porttitor quis, semper in augue. Maecenas feugiat neque sit amet nisl euismod in imperdiet lorem iaculis. Suspendisse a convallis augue. Fusce faucibus sollicitudin dui, lobortis semper lacus elementum et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ullamcorper ipsum sit amet libero aliquet feugiat. Nulla facilisi. Cras tincidunt convallis felis, sed vulputate lorem blandit eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque tortor leo, dapibus et vulputate in, laoreet sit amet odio. Nulla facilisi. Maecenas sit amet purus eu magna pellentesque sodales. In in velit sit amet sapien pharetra placerat non quis ante. Curabitur nisl tellus, aliquet quis facilisis non, congue eu lectus. Aenean lacinia, magna ut mattis aliquet, nisl augue posuere massa, ac bibendum nisi quam eu est.</p>
+
+		<p>Morbi faucibus condimentum dolor sed tristique. Suspendisse vel diam at purus sagittis pretium. Nulla dapibus arcu metus. Sed vulputate adipiscing dapibus. Nullam interdum turpis vitae massa venenatis pulvinar. Nulla commodo convallis augue ullamcorper facilisis. Nullam viverra sollicitudin mauris eget euismod. Suspendisse nec orci felis, non viverra quam. Nunc blandit neque arcu. Aenean dignissim auctor tortor, non hendrerit nisi semper sit amet. Donec vel quam sed arcu dignissim tempus. Sed lacus erat, cursus dapibus porta non, suscipit in odio. Morbi consequat condimentum lorem, dignissim interdum dui condimentum ac. Integer eros diam, lobortis in molestie vitae, ullamcorper eget enim. Pellentesque vel velit odio, non tincidunt turpis. Ut suscipit convallis odio, rhoncus vehicula dolor dignissim in. Phasellus consequat, turpis ut imperdiet tempus, turpis neque bibendum risus, non tempor nisl eros a risus. Aenean mi libero, placerat sed suscipit ut, tincidunt a mi.</p>
+
+	</body>
+</html>

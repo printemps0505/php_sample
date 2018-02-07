@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample1</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+			/*global $*/
+			$(function(){
+				$("img[src='images/jquery.jpg']").mouseover(function(){
+					$(this).attr("src","images/jquery_on.jpg");
+				}).mouseout(function(){
+					$(this).attr("src","images/jquery.jpg");
+				});
+				
+				$("img[src='images/javascript.jpg']").mouseover(function(){
+					$(this).attr("src","images/javascript_on.jpg");
+				}).mouseout(function(){
+					$(this).attr("src","images/javascript.jpg");
+				});
+				
+				$("img[src='images/css.jpg']").mouseover(function(){
+					$(this).attr("src","images/css_on.jpg");
+				}).mouseout(function(){
+					$(this).attr("src","images/css.jpg");
+				});
+				
+				$("img[src='images/html.jpg']").mouseover(function(){
+					$(this).attr("src","images/html_on.jpg");
+				}).mouseout(function(){
+					$(this).attr("src","images/html.jpg");
+				});
+			});
+		</script>
+		<style>
+li{
+	display:inline;
+	/*↑横並び処理*/
+	list-style-type:none;
+}
+img{
+	border:none;
+}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#"><img src="images/jquery.jpg" alt="jQuery"></a></li><!--
+			--><li><a href="#"><img src="images/javascript.jpg" alt="javascript"></a></li><!--
+			--><li><a href="#"><img src="images/css.jpg" alt="CSS"></a></li><!--
+			--><li><a href="#"><img src="images/html.jpg" alt="HTML"></a></li>
+		</ul>
+	</body>
+</html>

@@ -17,7 +17,7 @@ $errors = array();
 $success =array();
 $data = array();
 $rows = array();
-$item_types = array('食品','貴金属','雑貨');
+$item_types = array('食品','飲み物','貴金属');
 
 if (is_post()){
     //新商品追加・在庫数変更・公開非公開切り替え用識別子作成
@@ -83,6 +83,20 @@ if (is_post()){
             $errors[] = '商品を選択してください';
         }
     }
+    if ($process_kind === 'update_comment') {
+        //各フォームからデータを受け取っているかどうか判定
+        $item_comment = get_post('item_comment');
+        $item_id = get_post('item_id');
+        
+        //説明変更判定
+        if ($item_comment === ''){
+            $errors[] = '説明を入力してください';
+        }
+        if ($item_id === ''){
+            $errors[] = '商品を選択してください';
+        }
+    }
+   
     
     //ステータス更新判定
     if ($process_kind === 'change_status') {
@@ -94,8 +108,29 @@ if (is_post()){
             $errors[] = '商品を選択してください';
         }
     }
-    
-    
+    //カテゴリ更新判定
+    if ($process_kind === 'change_type') {
+        //各フォームからデータを受け取っているかどうか判定
+        $item_type = get_post('item_type');
+        $item_id = get_post('item_id');
+        
+        if ($item_id === ''){
+            $errors[] = '商品を選択してください';
+        }
+        
+        if ($item_type === ''){
+            $errors[] = 'カテゴリを選択してください';
+        }
+    }
+    //削除判定
+    if ($process_kind === 'delete') {
+        //各フォームからデータを受け取っているかどうか判定
+        $item_id = get_post('item_id');
+        
+        if ($item_id === ''){
+            $errors[] = '商品を選択してください';
+        }
+    }
 }
 
 //DBへの登録及び一覧表示設定*******************************************************************
@@ -115,9 +150,17 @@ try{
                 try{
                     //在庫数更新
                     update_stock($dbh,$item_stock,$item_id);
-                    $success[] = 'データが更新されました';
+                    $success[] = '在庫が更新されました';
                 }catch(PDOException $e){
-                    $errors[] = 'データが更新されませんでした';
+                    $errors[] = '在庫が更新されませんでした';
+                }
+            }else if($process_kind === 'update_comment'){
+                try{
+                    //在庫数更新
+                    update_comment($dbh,$item_comment,$item_id);
+                    $success[] = '説明が更新されました';
+                }catch(PDOException $e){
+                    $errors[] = '説明が更新されませんでした';
                 }
             }else if ($process_kind === 'change_status') {
                 try {
@@ -127,6 +170,24 @@ try{
                 
                 } catch (PDOException $e) {
                     $errors[] = 'ステータスが更新されませんでした';
+                }
+            }else if ($process_kind === 'change_type') {
+                try {
+                    //カテゴリ更新
+                    update_type($dbh,$item_id, $item_type);
+                    $success[] = 'カテゴリが更新されました';
+                
+                } catch (PDOException $e) {
+                    $errors[] = 'カテゴリが更新されませんでした';
+                }
+            }else if ($process_kind === 'delete') {
+                try {
+                    //レコード削除
+                    delete_item_by_item_id($dbh,$item_id);
+                    $success[] = 'レコードが削除されました';
+                
+                } catch (PDOException $e) {
+                    $errors[] = '削除に失敗しました';
                 }
             }
         }

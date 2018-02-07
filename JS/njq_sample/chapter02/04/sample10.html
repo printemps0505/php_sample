@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample10</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$("select").change(function(){
+		if($(":selected").attr("value")=="10 代"){
+			$("input").attr("disabled", "disabled");
+		}else{
+			$("input").removeAttr("disabled");
+		}
+	});
+});
+		</script>
+	</head>
+	<body>
+<p> 年齢：
+<select name="age">
+<option value=" 選択してください"> 選択してください</option>
+<option value="10 代">10 代</option>
+<option value="20 代">20 代</option>
+<option value="30 代">30 代</option>
+<option value="40 代以上">40 代以上</option>
+</select></p>
+<p> 好きなお酒：<input type="text"></p>
+	</body>
+</html>

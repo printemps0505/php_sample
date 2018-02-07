@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample10</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<style>
+			p{
+				width:800px;
+				height:267px;
+				margin:0;
+			}
+			div{
+				width:400px;
+				height:267px;
+				overflow:hidden;
+			}
+		</style>
+		<script>
+			/* global $ */
+			$(function(){
+				$("#flower").click(function(){
+					$("p:not(:animated)").animate({
+						"margin-left" : "-400px" 
+					},"slow","swing");
+				});
+				$("#building").click(function(){
+					$("p:not(:animated)").animate({
+						"margin-left" : "0" 
+					},"slow","swing");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div><p><img src="flower.jpg" alt="flower" id="flower"><img src="building.jpg" alt="building" id="building"></p></div>
+	</body>
+</html>

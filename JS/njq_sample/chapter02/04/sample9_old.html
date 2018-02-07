@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample9</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+			/*global $*/
+			$(function(){
+    			$('label,input[type="checkbox"]').click(function(){
+    				$("label").css("background","");
+    				$(":checked").each(function(){
+    					$("label[for='"+$(this).attr("id")+"']").css("background","#CCC");
+    				});
+    			});
+				
+				$('button').click(function(){
+					alert('hello');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		スキル:
+		<input type="checkbox" name="html" value="HTML" id="html">
+		<label for="html">HTML</label>
+		<input type="checkbox" name="css" value="CSS" id="css">
+		<label for="css">CSS</label>
+		<input type="checkbox" name="javascript"
+		value="JavaScript" id="javascript">
+		<label for="javascript">JavaScript</label>
+		<input type="checkbox" name="php" value="PHP" id="php">
+		<label for="php">PHP</label>
+		<button>hello</button>
+	</body>
+</html>

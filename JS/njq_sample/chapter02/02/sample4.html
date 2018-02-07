@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample4</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$("p#second").html($("p#first").html());
+});
+		</script>
+	</head>
+	<body>
+		<p id="first"><strong>変更後</strong></p>
+		<p id="second">変更前</p>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample10</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$("a").mouseup(function(){
+		$("img").attr("src",$(this).attr("href")).attr("alt",$(this).text());
+	}).click(function(){
+		return false;
+	});
+});
+		</script>
+	</head>
+	<body>
+	<ul>
+		<li><a href="flower.jpg">花</a></li>
+		<li><a href="sea.jpg">海</a></li>
+		<li><a href="jellyfish.jpg">くらげ</a></li>
+		<li><a href="building.jpg">建物</a></li>
+	</ul>
+	<p><img src="flower.jpg" alt="花" /></p>
+	
+	</body>
+</html>

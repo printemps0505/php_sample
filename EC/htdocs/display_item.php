@@ -12,6 +12,10 @@ if($user_id === FALSE){
   header('Location: login.php');
   exit;
 }
+
+//カテゴリ一覧から飛んできた際に必要な処理
+$item_types = get_get('item_type');
+
 try {
 
   $dbh = get_db_connect();

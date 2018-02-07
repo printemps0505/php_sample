@@ -1,0 +1,16 @@
+overqualifiedがついてしまうcssについて、つくものとつかないものがあるのはなぜ？
+
+3-7 
+position:relativeとabsoluteの使用の仕方
+cssでの対象の指定の仕方について(50行目)
+floatとpositionの関係について(webの話)
+3-9
+下の解説が誤植ではないか？
+3-10
+P238 positon:relativeの重複がある
+117と118でなぜ左-25pxを二回分けているのか・・
+42行目：$(this).val()が最初にあるのはなぜ？
+
+3-11
+P250の図：carouselが一番上に来ているが、実際の設定がそうなっているわけではない？
+cssで#carouselWrapがmargin:100px autoの設定があるがなぜ？

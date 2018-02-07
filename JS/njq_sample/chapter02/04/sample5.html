@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script>
+	/*global $*/
+		$(function(){
+			$("input").val("入力してください").css("color","#CCC")
+			.one("focus",function(){
+				$(this).val("").css("color","#000");
+			}).blur(function(){
+				if($(this).val() == ""){
+					$(this).val("入力してください").css("color","#CCC")
+					.one("focus",function(){
+						$(this).val("").css("clolor","#000");
+					});
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	お名前：<input type="text" value="">
+	
+</body>
+</html>

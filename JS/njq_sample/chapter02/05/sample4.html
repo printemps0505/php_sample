@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample4</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$("table tr").each(function(){
+		$(this).html("<td>"+$("th",this).text()+"は"+$("td",this).text()+"</td>");
+	});
+});
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr><th>text(...)</th><td>テキストを変更する</td></tr>
+			<tr><th>html(...)</th><td>(HTMLを変更する </td></tr>
+			<tr><th>prepend(...)</th><td>要素内の先頭にHTMLを挿入する</td></tr>
+			<tr><th>append(...)</th><td>要素内の最後にHTMLを挿入する</td></tr>
+			<tr><th>before(...)</th><td>要素の前にHTMLを挿入する</td></tr>
+			<tr><th>after(...)</th><td>要素の後にHTMLを挿入する</td></tr>
+		</table>
+	</body>
+</html>

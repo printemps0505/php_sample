@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample3</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$("p.panel").load($("ul.tab li a.selected").attr("href"));
+	$("ul.tab li a").click(function(){
+		$("ul.tab li a.selected").removeClass("selected");
+		$(this).addClass("selected");
+		$("p.panel").load($(this).attr("href"));
+		return false;
+	});
+});
+		</script>
+		<style>
+*{
+	margin:0;
+	padding:0;
+}
+#container{
+	width:500px;
+	margin:50px auto;
+}
+ul.tab{
+	padding:0;
+}
+ul.tab li{
+	list-style-type:none;
+	width:100px;
+	height:40px;
+	float:left;
+}
+ul.tab li a{
+	outline:none;
+	background:url("./images/tab.jpg");
+	display:block;
+	color:blue;
+	line-height:40px;
+	text-align:center;
+}
+ul.tab li a.selected{
+	background:url("./images/tab_selected.jpg");
+	text-decoration:none;
+	color:#333;
+	cursor:default;
+}
+p.panel{
+	clear:both;
+	border:1px solid #9FB7D4;
+	border-top:none;
+	padding:10px;
+	text-indent:1em;
+	color:#333;
+}
+
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<ul class="tab">
+				<li><a href="javascript.txt" class="selected">JavaScript</a></li>
+				<li><a href="css.txt">CSS</a></li>
+				<li><a href="html.txt">HTML</a></li>
+				<li><a href="jquery.txt">jQuery</a></li>
+				<li><a href="xhtml.txt">XHTML</a></li>
+			</ul>
+			<p class="panel"><p>
+		</div>
+	</body>
+</html>

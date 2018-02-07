@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample9</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+global(function(){
+	global("button#fade100").click(function(){
+		global("img:not(:animated)").fadeTo("slow",1);
+	});
+	global("button#fade50").click(function(){
+		global("img:not(:animated)").fadeTo("slow",0.5);
+	});
+	global("button#fade0").click(function(){
+		global("img:not(:animated)").fadeTo("slow",0);
+	});
+});
+		</script>
+	</head>
+	<body>
+		<button id="fade100">表示</button>
+		<button id="fade50">半透明</button>
+		<button id="fade0">非表示</button>
+		<p><img src="flower.jpg" alt="flower"></p>
+	</body>
+</html>

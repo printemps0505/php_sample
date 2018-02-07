@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample1</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+		/*global $*/
+			$(function(){
+				$("a.open").click(function(){
+					$("#floatWindow").fadeIn("fast");
+					return false;
+				});
+				
+				$("#floatWindow a.close").click(function(){
+					$("#floatWindow").fadeOut("fast");
+					return false;
+				});
+				$("#floatWindow dl dt").mousedown(function(e){
+					
+					$("#floatWindow")
+						.data("clickPointX" , e.pageX - $("#floatWindow").offset().left)
+						.data("clickPointY" , e.pageY - $("#floatWindow").offset().top);
+					
+					$(document).mousemove(function(e){
+						$("#floatWindow").css({
+							top:e.pageY  - $("#floatWindow").data("clickPointY")+"px",
+							left:e.pageX - $("#floatWindow").data("clickPointX")+"px"
+						});
+					});
+				}).mouseup(function(){
+					$(document).unbind("mousemove");
+				});
+			});
+		</script>
+		<style>
+			#floatWindow{
+				display:none;
+				position:absolute;
+				width:500px;
+				height:400px;
+				top:100px;
+				left:100px;
+			}
+			#floatWindow a.close{
+				position:absolute;
+				right:20px;
+				top:1px;
+			}
+			#floatWindow a.close img{
+				border:none;
+			}
+			#floatWindow dl{
+				width:100%;
+				height:100%;
+				background:url("./images/floatWindow.png");
+				margin:0;
+			}
+			#floatWindow dl dt{
+				height:25px;
+				line-height:25px;
+				text-indent:1em;
+				color:white;
+				font-weight:bold;
+				cursor:move;
+			}
+			#floatWindow dl dd{
+				margin:0;
+				padding:2em;
+				line-height:1.5;
+				text-indent:1em;
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		<a href="#floatWindow" class="open">フローティングウィンドウの表示</a>
+		
+		<div id="floatWindow">
+			<a href="sample1.html" class="close"><img src="./images/close.png" alt="閉じる"></a>
+			<dl>
+				<dt>jQueryによるフローティングウィンドウの作成</dt>
+				<dd>今回はjQueryでフローティングウィンドウを作成する方法を解説します。フローティングウィンドウとはWebページ上にドラッグ可能な別の子ウィンドウを表示するUIのことです。ポップアップなどで表示されるウィンドウとは異なりブラウザのポップアップブロックなどの影響を受けず、また、元のサイトにレイアウトなどに影響を与えずにウィンドウを表示することが可能になっています。</dd>
+			</dl>
+		</div>
+	</body>
+</html>

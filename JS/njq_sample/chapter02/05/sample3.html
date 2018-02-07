@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample3</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$.ajax({
+		url: 'sample3.xml',
+		dataType: 'xml',
+		success : function(data){
+			$("item",data).each(function(){
+				$("dl").append("<dt><a href='"+$("link",this).text()+"'>"+$("title",this).text()+"</a></dt><dd>"+$("description",this).text()+"</dd>");
+			});
+		}
+	});
+});
+		</script>
+	</head>
+	<body>
+		<dl></dl>
+	</body>
+</html>

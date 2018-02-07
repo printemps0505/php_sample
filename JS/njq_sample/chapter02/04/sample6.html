@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample6</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$("select").change(function(){
+		$("span").text($(this).val());
+	});
+});
+		</script>
+	</head>
+	<body>
+		申し込み者：
+		<select>
+			<option value="お名前">個人</option>
+			<option value="会社名">法人</option>
+		</select>
+		<p><span>お名前</span><input type="text"></p>
+
+	</body>
+</html>

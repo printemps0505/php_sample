@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample3</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<style>
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+body{
+	background:black;
+}
+#container{
+	width:1000px;
+	margin:20px auto;
+}
+#navi{
+	width:300px;
+	float:left;
+}
+#navi ul{
+	height:460px;
+}
+#navi li{
+	list-style-type:none;
+	width:150px;
+	float:left;
+}
+#navi li img{
+	border:3px solid white;
+}
+#navi{
+	overflow:hidden;
+}
+#navi .pageWrap{
+	width:900px;
+}
+#navi .pageWrap .page{
+	width:300px;
+	float:left;
+}
+#navi p{
+	clear:both;
+	width:300px;
+	padding:10px 0;
+	text-align:center;
+}
+#navi p img{
+	cursor:pointer;
+}
+#main{
+	width:650px;
+	float:right;
+}
+#main img{
+	position:absolute;
+	border:3px solid white;
+}
+
+		</style>
+		<script>
+			/*global $*/
+			$(function(){
+				$("#navi a").click(function(){
+					$("#main img").before("<img src='"+$(this).attr("href")+"' alt=''>");
+					$("#main img:last").fadeOut("fast",function(){
+						$(this).remove();
+					});
+					return false;
+				});
+				$("img.next").click(function(){
+					$("#navi .pageWrap").animate({
+						"margin-left" : parseInt($("#navi .pageWrap").css("margin-left"),10)-300+"px"
+						//margin-leftには'~px'という文字列が入っている。これをparseIntで整数に上げる
+					},"fast");
+				});
+				$("img.prev").click(function(){
+					$("#navi .pageWrap").animate({
+						"margin-left" : parseInt($("#navi .pageWrap").css("margin-left"),10)+300+"px"
+					},"fast");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="navi">
+				<div class="pageWrap">
+					<div  class="page">
+						<ul>
+							<li><a href="images/photo1.jpg"><img src="images/photo1_thum.jpg" alt="シャンデリア"></a></li>
+							<li><a href="images/photo2.jpg"><img src="images/photo2_thum.jpg" alt="バラ"></a></li>
+							<li><a href="images/photo3.jpg"><img src="images/photo3_thum.jpg" alt="海"></a></li>
+							<li><a href="images/photo4.jpg"><img src="images/photo4_thum.jpg" alt="門"></a></li>
+							<li><a href="images/photo5.jpg"><img src="images/photo5_thum.jpg" alt="海"></a></li>
+							<li><a href="images/photo6.jpg"><img src="images/photo6_thum.jpg" alt="あじさい"></a></li>
+							<li><a href="images/photo7.jpg"><img src="images/photo7_thum.jpg" alt="空"></a></li>
+							<li><a href="images/photo8.jpg"><img src="images/photo8_thum.jpg" alt="建物"></a></li>
+						</ul>
+						<p><img src="images/btn_next.jpg" alt="次へ" class="next"></p>
+					</div>
+					<div  class="page">
+						<ul>
+							<li><a href="images/photo9.jpg"><img src="images/photo9_thum.jpg" alt="手"></a></li>
+							<li><a href="images/photo10.jpg"><img src="images/photo10_thum.jpg" alt="床"></a></li>
+							<li><a href="images/photo11.jpg"><img src="images/photo11_thum.jpg" alt="木"></a></li>
+							<li><a href="images/photo12.jpg"><img src="images/photo12_thum.jpg" alt="緑"></a></li>
+							<li><a href="images/photo13.jpg"><img src="images/photo13_thum.jpg" alt="花"></a></li>
+							<li><a href="images/photo14.jpg"><img src="images/photo14_thum.jpg" alt="くらげ"></a></li>
+							<li><a href="images/photo15.jpg"><img src="images/photo15_thum.jpg" alt="風船"></a></li>
+							<li><a href="images/photo16.jpg"><img src="images/photo16_thum.jpg" alt="花"></a></li>
+						</ul>
+						<p><img src="images/btn_prev.jpg" alt="前へ" class="prev"> <img src="images/btn_next.jpg" alt="次へ" class="next"></p>
+					</div>
+					<div  class="page">
+						<ul>
+							<li><a href="images/photo17.jpg"><img src="images/photo17_thum.jpg" alt="花"></a></li>
+							<li><a href="images/photo18.jpg"><img src="images/photo18_thum.jpg" alt="花"></a></li>
+							<li><a href="images/photo19.jpg"><img src="images/photo19_thum.jpg" alt="花"></a></li>
+						</ul>
+						<p><img src="images/btn_prev.jpg" alt="前へ" class="prev"></p>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<img src="images/photo1.jpg" alt="">
+			</div>
+		</div>
+	</body>
+</html>

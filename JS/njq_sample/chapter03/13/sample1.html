@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample1</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+
+	//ページングの設定
+	$("#slide li").each(function(){
+		$("#paging").append($("<li></li>").attr("data-img",$("img",this).attr("src")));
+	});
+	$("#paging li:first-child").addClass("active");
+
+	//右矢印ボタンが押された際の挙動
+	$("#nav .next").click(function(){
+		$("#slide:not(:animated)").animate({
+			"margin-left" : -1*$("#slide li").width()
+		},function(){
+			$("#slide").css("margin-left","0").append($("#slide li:first-child"));
+			$("#paging li.active").removeClass("active");
+			$("#paging li[data-img='"+$("#slide li:first-child img").attr("src")+"']").addClass("active");
+		});
+	});
+
+	//左矢印ボタンが押された際の挙動
+	$("#nav .prev").click(function(){
+		$("#slide:not(:animated)")
+			.css("margin-left",-1*$("#slide li").width())
+			.prepend($("#slide li:last-child"))
+			.animate({
+			"margin-left" : 0
+		},function(){
+			$("#paging li.active").removeClass("active");
+			$("#paging li[data-img='"+$("#slide li:first-child img").attr("src")+"']").addClass("active")
+		});
+	});
+
+});
+		</script>
+		<style>
+*{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#container{
+	width:650px;
+	margin:100px auto;
+}
+#slideGalley{
+	width:650px;
+	position: relative;
+	overflow:hidden;
+}
+#slide{
+	width:10000px;
+}
+#slide li{
+	float:left;
+}
+#paging{
+	text-align: center;
+	position: absolute;
+	width:100%;
+	bottom:10px;
+}
+#paging li{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	width:20px;
+	height:20px;
+	background: url(./images/page.png);
+}
+#paging li.active{
+	background: url(./images/page_active.png);
+}
+#nav .prev{
+	position: absolute;
+	left:10px;
+	top:50%;
+	margin-top:-50px;
+}
+#nav .next{
+	position: absolute;
+	right:10px;
+	top:50%;
+	margin-top:-50px;
+}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="slideGalley">
+				<ul id="slide">
+					<li><a href="#"><img src="./images/photo01.jpg" alt=""></a></li>
+					<li><a href="#"><img src="./images/photo02.jpg" alt=""></a></li>
+					<li><a href="#"><img src="./images/photo03.jpg" alt=""></a></li>
+					<li><a href="#"><img src="./images/photo04.jpg" alt=""></a></li>
+				</ul>
+				<div id="nav">
+					<img src="./images/nav_prev.png" class="prev">
+					<img src="./images/nav_next.png" class="next">
+				</div>
+				<ul id="paging"></ul>
+			</div>
+		</div>
+	</body>
+</html>

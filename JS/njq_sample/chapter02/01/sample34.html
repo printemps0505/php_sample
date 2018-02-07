@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample34</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$("li:contains('サンプル')").css("color","red");
+	$("li:has(strong)").css("color","red");
+});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li><strong>テキスト</strong>テキストテキストテキストテキスト</li>
+			<li>テキストテキストテキストテキストテキスト</li>
+			<li>テキストテキストテキストテキストテキスト</li>
+			<li>サンプルサンプルサンプルサンプルサンプル</li>
+		</ul>
+	</body>
+</html>

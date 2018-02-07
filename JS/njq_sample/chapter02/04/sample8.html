@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>sample8</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>
+$(function(){
+	$("form").submit(function(){
+		if($("input[name='name']").val()==""){
+			if($("span").css("font-weight") != "bold"){
+				$("input[name='name']").css("border","1px solid red").after("<span>お名前を入力してください</span>");
+				$("span").css({
+					"color":"red",
+					"font-weight":"bold"
+				});
+			}
+			return false;
+		}
+	});
+});
+		</script>
+	</head>
+	<body>
+		<form action="check.html" method="post">
+			<dl>
+				<dt>お名前<em>(必須)</em></dt>
+				<dd><input type="text" name="name"></dd>
+				<dt>性別</dt>
+				<dd>
+					<input type="radio" name="gender" value="男性" id="gender_man">
+					<label for="gender_man">男性</label>
+					<input type="radio" name="gender" value="女性" id="gender_woman">
+					<label for="gender_woman">女性</label>
+				</dd>
+				<dt>年齢</dt>
+				<dd>
+					<select name="age">
+						<option>選択してください</option>
+						<option value="10代">10代</option>
+						<option value="20代">20代</option>
+						<option value="30代">30代</option>
+						<option value="40代以上">40代以上</option>
+					</select>
+				</dd>
+				<dt>スキル</dt>
+				<dd>
+					<input type="checkbox" name="html" value="HTML" id="html">
+					<label for="html">HTML</label>
+					<input type="checkbox" name="css" value="CSS" id="css">
+					<label for="css">CSS</label>
+					<input type="checkbox" name="javascript" value="JavaScript" id="javascript">
+					<label for="javascript">JavaScript</label>
+					<input type="checkbox" name="php" value="PHP" id="php">
+					<label for="php">PHP</label>
+				</dd>
+				<dt>コメント</dt>
+				<dd>
+					<textarea name="comment"></textarea>
+				</dd>
+			</dl>
+			<input type="submit" value="送信">
+		</form>
+	</body>
+</html>
